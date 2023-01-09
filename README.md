@@ -19,7 +19,7 @@ asyncFunction1(function(){
 ```
 It's very hard to read this code, and that's not even showing the error handling. 
 
-***
+
 ### AngularJS and New ES6 API
 #### Promise
 Object which can be passed around or returned that holds references to the outcome of asynchronous behavior.
@@ -68,3 +68,16 @@ $q.all([promise1, promise2])
     // handle error
 })
 ```
+
+***
+#### _Summary_
+* Promises give us a lot of flexibility when dealing asynchronous behavior.
+* The `$q` service is the Angular implementation of Promise API.
+* Promises either get resolved or rejected.
+* The `.then` method takes 2 arguments (both function values):
+    * 1st - function to handle success or 'resolve' outcome;
+    * 2nd - function to handle error or 'reject' outcome;
+    * `.then` itself returns a Promise, so it chainable.
+* `$q.all` method allows us to execute multiole promises in parallel, handling success/failure in one central place.
+***
+
